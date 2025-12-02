@@ -9,25 +9,24 @@
   text-shadow: none;
   border: @btn-border;
   background-color: @color;
-  background-image: linear-gradient(lighten(@color, 2%), @color);
 
   &:hover {
     color: @text-color-highlight;
-    background-image: linear-gradient(lighten(@hover-color, 2%), @hover-color);
+    background-color: @hover-color;
   }
   &:active {
-    background: darken(@color, 4%);
+    background-color: darken(@color, 4%);
     box-shadow: none;
   }
   &.selected {
-    background: @selected-color;
+    background-color: @selected-color;
   }
   &.selected:focus,
   &.selected:hover {
-    background: lighten(@selected-color, 2%);
+    background-color: lighten(@selected-color, 2%);
   }
   &:focus {
-    .focus(); // unfortunately :focus styles stay even after releasing mouse.
+    .focus();
   }
 }
 

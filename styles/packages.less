@@ -229,3 +229,46 @@
   }
 
 }
+
+// scroll-map ---------------------------
+
+.scroll-map {
+  .scroll-item {
+    opacity: 0.7;
+    border-radius: 1px;
+
+    &.cursor-layer {
+      opacity: 1;
+    }
+  }
+}
+
+// title-bar ---------------------------
+
+.title-bar {
+  border-bottom: 1px solid @base-border-color;
+
+  .app-menu .menu-label .menu-box {
+    border-radius: @component-border-radius;
+    box-shadow: 0 4px 16px -2px hsla(0,0%,0%,.15);
+
+    .menu-item {
+      border-radius: (@component-border-radius - 2px);
+    }
+  }
+
+  .title-bar .control-wrap button {
+    &:hover {
+      background-color: @background-color-highlight;
+    }
+    &:active {
+      background-color: @background-color-selected;
+    }
+  }
+}
+
+// navigation-panel ---------------------------
+
+.navigation-marker {
+  background: fade(@accent-bg-color, 15%);
+}

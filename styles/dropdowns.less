@@ -2,10 +2,12 @@
   background-color: @overlay-background-color;
   border-radius: @component-border-radius;
   border: 1px solid @base-border-color;
-  padding: 0;
+  padding: 4px;
+  box-shadow: 0 4px 16px -2px hsla(0,0%,0%,.15);
 
   > li > a {
     .text(normal);
+    border-radius: (@component-border-radius - 2px);
   }
 
   > li > a:hover {

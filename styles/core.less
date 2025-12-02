@@ -15,25 +15,6 @@ atom-text-editor .highlights {
   }
 }
 
-// Modal + select-list
-
-atom-panel.modal {
-  max-width: 80em;
-}
-
-.select-list .list-group {
-  max-height: 550px !important;
-}
-
-.select-list {
-  ol, li {
-    border-bottom: none !important;
-  }
-  li:hover {
-    background: fade(@background-color-selected, 40);
-  }
-}
-
 // Terminal
 
 .terminal.xterm {
@@ -46,7 +27,7 @@ autocomplete-suggestion-list.select-list.popover-list {
   ol.list-group {
     li {
       .character-match {
-        color: #304ee2 !important;
+        color: @accent-only-text-color !important;
       }
     }
   }
@@ -64,16 +45,4 @@ autocomplete-suggestion-list.select-list.popover-list {
   // incompatible-packages isn't really a tool-panel and more a whole pane
   .text(normal);
   background-color: @level-2-color;
-}
-
-// Styleguide ----------------------------------------------
-
-.styleguide {
-  // Modal
-  atom-panel.modal:after {
-    position: absolute;  // prevent overlay backdrop from leaking outside
-    left: -@ui-padding;
-    right: -@ui-padding;
-    bottom: -@ui-padding;
-  }
 }

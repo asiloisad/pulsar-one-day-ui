@@ -1,6 +1,6 @@
 
 @modal-padding: (@ui-padding/2) (@ui-padding/1.5);
-@modal-width: (@ui-size * 50);
+@modal-width: 80em;
 
 atom-panel-container.modal {
   position: absolute;
@@ -27,8 +27,10 @@ atom-panel.modal {
 
   .select-list ol.list-group,
   &.select-list ol.list-group {
-    border: 1px solid @overlay-border-color;
-    background-color: lighten(@overlay-background-color, 2%);
+    border: none;
+    border-radius: @component-border-radius;
+    background-color: transparent;
+    max-height: 550px !important;
 
     &:empty {
       border: none;
@@ -38,11 +40,10 @@ atom-panel.modal {
     li {
       padding: @modal-padding;
       line-height: @ui-line-height;
-      border-bottom: 1px solid @overlay-border-color;
-
-      &:last-of-type {
-        border-bottom: none;
-      }
+      border-radius: @component-border-radius;
+      margin: 2px 0;
+      border-bottom: none !important;
+      backface-visibility: hidden; // fix scroll rendering
 
       .icon::before {
         margin-left: 1px;
@@ -57,7 +58,12 @@ atom-panel.modal {
         }
       }
 
+      &:hover {
+        background: fade(@background-color-selected, 40);
+      }
+
       &.selected {
+        background-color: @background-color-selected;
         .status.icon {
           color: @text-color-selected;
         }
@@ -96,13 +102,12 @@ atom-panel.modal {
     bottom: 0;
     z-index: 0;
     background-color: @overlay-background-color;
-    border-radius: (@component-border-radius*2);
-    box-shadow: 0 6px 12px -2px hsla(0,0%,0%,.4);
+    border-radius: 12px;
+    box-shadow: 0 6px 24px hsla(0,0%,0%,.12),
+                0 2px 8px hsla(0,0%,0%,.08);
   }
 
   // Backdrop
-  // TODO: Add extra wrapper to translate individually or easier positioning
-
   &:after {
     content: "";
     position: fixed;
@@ -113,13 +118,17 @@ atom-panel.modal {
     z-index: -1;
     background: @overlay-backdrop-color;
     opacity: @overlay-backdrop-opacity;
-    backface-visibility: hidden; // fixes scrollbar on retina screens
-    -webkit-animation: overlay-fade .24s cubic-bezier(0.215, 0.61, 0.355, 1);
+    backface-visibility: hidden;
   }
 
-  @-webkit-keyframes overlay-fade {
-    0% { opacity: 0; }
-    100% { opacity: @overlay-backdrop-opacity; }
-  }
+}
 
+// Styleguide
+.styleguide {
+  atom-panel.modal:after {
+    position: absolute; // prevent overlay backdrop from leaking outside
+    left: -@ui-padding;
+    right: -@ui-padding;
+    bottom: -@ui-padding;
+  }
 }
