@@ -1,0 +1,48 @@
+
+// Tabs (Even sizing) ----------------------------------------------
+
+@tab-min-width: 7em;
+
+.tab-bar {
+  .tab,
+  .tab.active {
+    flex: 1 1 0;
+    max-width: 22em;
+    min-width: @tab-min-width;
+  }
+  atom-dock & {
+    .tab,
+    .tab.active {
+      max-width: none;
+    }
+  }
+}
+
+// Sticky project headers ----------------------------------------------
+
+.tree-view {
+  .project-root-header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding-left: 5px;
+    padding-right: 10px;
+    border-bottom: 1px solid @base-border-color;
+    background-color: @tree-view-background-color;
+  }
+  .project-root.project-root {
+    margin-left: -5px;
+    margin-right: -10px;
+
+    &::before {
+      display: none;
+    }
+
+    &.selected .project-root-header {
+      background-color: @background-color-selected;
+    }
+  }
+  &:focus .selected .project-root-header.project-root-header {
+    background: @button-background-color-selected;
+  }
+}
