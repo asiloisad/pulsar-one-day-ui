@@ -65,3 +65,15 @@ atom-workspace {
   border-top: 5px solid #fff;
   margin-top: -1px;
 }
+
+// fix of icons position
+div, span {
+  &.icon::before {
+    transform: translate(0px, -2px) !important;
+  }
+}
+status-bar-launch-mode {
+  &.icon::before {
+    transform: translate(0px, -3px) !important;
+  }
+}
