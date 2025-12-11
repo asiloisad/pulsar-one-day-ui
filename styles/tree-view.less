@@ -8,13 +8,27 @@
     margin-left: -15px;
   }
 
-  li.file, .header.list-item {
-    &:hover {
-      background: @background-color-selected;
-    }
+  .list-tree {
+    overflow: visible;
   }
 
-  .selected > .header:not(.project-root-header):hover {
+  li.file:hover:after,
+  .header.list-item:hover:after {
+    content: '';
+    position: absolute;
+    left: -100vw;
+    right: 0;
+    height: @tree-view-height;
+    background: @background-color-highlight;
+    z-index: -1;
+  }
+
+  .header.list-item.project-root-header:hover:after {
+    height: calc(@ui-tab-height + 1px);
+  }
+
+  .selected:hover:after,
+  .selected > .header:hover:after {
     background: none !important;
   }
 
