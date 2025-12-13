@@ -10,6 +10,18 @@ atom-panel-container atom-text-editor.is-focused {
 // Mini
 // Usually just single line inputs
 
+atom-text-editor {
+  .placeholder-text {
+    color: @text-color-subtle;
+    animation: placeholderPulse 4s ease-in-out infinite;
+  }
+
+  @keyframes placeholderPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+  }
+}
+
 atom-text-editor[mini] {
   overflow: auto;
   font-size: @ui-input-size;
@@ -20,10 +32,6 @@ atom-text-editor[mini] {
   color: @text-color-highlight;
   border: 1px solid @input-border-color;
   background-color: @input-background-color;
-
-  .placeholder-text {
-    color: @text-color-subtle;
-  }
 
   .selection .region {
     background-color: @input-selection-color;
