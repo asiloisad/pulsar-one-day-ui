@@ -72,26 +72,40 @@ atom-panel.modal {
     }
   }
 
-  .select-list .key-binding {
-    margin-top: -1px;
-    margin-left: (@ui-padding / 2);
-    margin-right: calc((-@ui-padding / 3) ~"+" 1px);
-  }
+  .select-list {
 
-  .select-list .primary-line {
-    display: block;
-  }
-
-  .select-list .markdown {
-    p, ul {
-      margin-bottom: 0px;
-      line-height: 1.8;
+    .key-binding {
+      margin-top: -1px;
+      margin-left: (@ui-padding / 2);
+      margin-right: calc((-@ui-padding / 3) ~"+" 1px);
     }
-    ul, ol {
-      padding-left: 2.5em;
-    }
-  }
 
+    .primary-line {
+      display: block;
+    }
+
+    .markdown {
+      cursor: default;
+      p, ul {
+        margin-bottom: 0px;
+        line-height: 1.8;
+      }
+      ul, ol {
+        padding-left: 2.5em;
+      }
+    }
+
+    .empty-message {
+      color: @text-color-info;
+      margin-top: 10px;
+    }
+
+    .error-message {
+      color: @text-color-error;
+      margin-top: 10px;
+    }
+
+  }
 
   & > * {
     position: relative; // fixes stacking order
