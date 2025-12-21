@@ -22,6 +22,18 @@ atom-text-editor {
   }
 }
 
+// Git diff gutter markers
+atom-text-editor .gutter .line-number {
+  &.git-line-added {
+    border-left: none;
+    color: @text-color-success;
+  }
+  &.git-line-modified {
+    border-left: none;
+    color: @text-color-warning;
+  }
+}
+
 atom-text-editor[mini] {
   overflow: auto;
   font-size: @ui-input-size;
