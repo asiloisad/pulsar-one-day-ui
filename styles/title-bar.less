@@ -1,4 +1,21 @@
 .title-bar {
-  height: 22px; // remove 1px since there is no border
-  border-bottom: none;
+  border-bottom: 1px solid @base-border-color;
+
+  .app-menu .menu-label .menu-box {
+    border-radius: @component-border-radius;
+    box-shadow: 0 4px 16px -2px hsla(0,0%,0%,.15);
+
+    .menu-item {
+      border-radius: (@component-border-radius - 2px);
+    }
+  }
+
+  .title-bar .control-wrap button {
+    &:hover {
+      background-color: @background-color-highlight;
+    }
+    &:active {
+      background-color: @background-color-selected;
+    }
+  }
 }
