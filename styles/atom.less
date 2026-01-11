@@ -67,9 +67,11 @@ atom-workspace {
 }
 
 // fix of icons position
-div, span {
-  &.icon::before {
-    transform: translate(0px, -2px) !important;
+.tree-view, .tab-bar, .status-bar {
+  div, span {
+    &.icon::before {
+      transform: translate(0px, -2px) !important;
+    }
   }
 }
 status-bar-launch-mode {
