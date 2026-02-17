@@ -1,17 +1,20 @@
 // Overrides packages
 
-// find-and-replace + project-find ---------------------------
+// find-and-replace + search-panel + project-find ---------------------------
 
 .find-and-replace,
-.project-find {
+.search-panel,
+.project-find,
+.search-panel-project {
   padding: (@ui-padding/4);
   .input-block-item {
     padding: (@ui-padding/4);
   }
 }
 
-// find-and-replace
-.find-and-replace {
+// find-and-replace + search-panel
+.find-and-replace,
+.search-panel {
   .header,
   .input-block {
     min-width: (@ui-size*22);
@@ -47,8 +50,9 @@
   }
 }
 
-// project-find
-.project-find {
+// project-find + search-panel-project
+.project-find,
+.search-panel-project {
   .header,
   .input-block {
     min-width: (@ui-size*15);
@@ -71,9 +75,10 @@
   }
 }
 
-// Colorize find-and-replace based on results
+// Colorize find-and-replace + search-panel based on results
 & when (@ui-hue >= 190) and (@ui-hue <= 340) {
-  .find-and-replace {
+  .find-and-replace,
+  .search-panel {
     &.has-no-results .find-container atom-text-editor[mini].is-focused {
       .invalid();
       .selection .region {
