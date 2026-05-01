@@ -17,6 +17,7 @@ atom-panel.modal {
   color: @text-color;
   background-color: transparent;
   padding: (@ui-padding / 2);
+  animation: one-day-modal-in 0.10s cubic-bezier(0.2, 0.8, 0.3, 1) both;
 
   &.from-top {
     top: (@component-padding * 5);
@@ -138,7 +139,19 @@ atom-panel.modal {
     background: @overlay-backdrop-color;
     opacity: @overlay-backdrop-opacity;
     backface-visibility: hidden;
+    animation: one-day-backdrop-in 0.10s ease both;
   }
+}
+
+// Animations
+@keyframes one-day-modal-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes one-day-backdrop-in {
+  from { opacity: 0; }
+  to   { opacity: @overlay-backdrop-opacity; }
 }
 
 // Styleguide
