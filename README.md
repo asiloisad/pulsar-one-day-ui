@@ -1,10 +1,10 @@
 # one-day-ui
 
-Light UI theme with a clean, modern look. Designed to pair with [one-day-syntax](https://github.com/asiloisad/pulsar-one-day-syntax).
+Light UI theme with a clean, modern look. Designed to pair with [one-day-syntax](https://github.com/asiloisad-pulsar/one-day-syntax).
 
-![view-1](https://github.com/asiloisad/pulsar-one-day-ui/blob/master/assets/view-1.png?raw=true)
+![view-1](https://github.com/asiloisad-pulsar/one-day-ui/blob/master/assets/view-1.png?raw=true)
 
-![view-2](https://github.com/asiloisad/pulsar-one-day-ui/blob/master/assets/view-2.png?raw=true)
+![view-2](https://github.com/asiloisad-pulsar/one-day-ui/blob/master/assets/view-2.png?raw=true)
 
 ## Installation
 
