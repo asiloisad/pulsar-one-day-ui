@@ -8,7 +8,7 @@ Light UI theme with a clean, modern look. Designed to pair with [one-day-syntax]
 
 ## Installation
 
-To install `one-day-ui` search for [one-day-ui](https://web.pulsar-edit.dev/packages/one-day-ui) in the Install pane of the Pulsar settings or run `ppm install one-day-ui`. Alternatively, you can run `ppm install asiloisad/pulsar-one-day-ui` to install a package directly from the GitHub repository.
+To install `one-day-ui` search for [one-day-ui](https://web.pulsar-edit.dev/packages/one-day-ui) in the Install pane of the Pulsar settings or run `ppm install one-day-ui`. Alternatively, you can run `ppm install asiloisad-pulsar/one-day-ui` to install a package directly from the GitHub repository.
 
 ## Contributing
 
